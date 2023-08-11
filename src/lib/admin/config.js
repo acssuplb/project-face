@@ -8,7 +8,7 @@ export default defineConfig({
     projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
     dataset: import.meta.env.VITE_SANITY_DATASET,
     basePath: "/admin",
-    plugins: [deskTool(), visionTool],
+    plugins: [deskTool(), visionTool()],
     schema: {
         types: schemaTypes,
     },

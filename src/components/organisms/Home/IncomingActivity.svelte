@@ -1,48 +1,48 @@
 <!-- Incoming/Ongoing Event Section -->
 <script>
   let eventName = "ACSS Orientation";
-  let eventDescription = "Get to know more about the organization.";
-  let eventImage = "/assets/event-image.svg";
+  let eventDescription =
+    "Lorem ipsum dolor sit amet consectetur. Euismod tellus mattis eget bibendum tempus non sed. Posuere dis sapien suspendisse tellus. Urna venenatis.";
+  let eventImage = "/assets/placeholder-event-image.svg";
   let eventDateTime = "September 00, 2023 7:00 PM";
-  import Button from "../../atoms/Button.svelte";
+  import { Button } from "$components";
+  function handleButton() {
+    window.location.href = "/registration/form-acss-orientation";
+  }
 </script>
 
-<section>
-  <div class="grid grid-cols-1 ss:pt-20 md:pt-32">
-    <div class="relative h-[40px] ss:h-[75px]">
-      <img
-        src="/assets/event-header.svg"
-        alt="ACSS Event Header"
-        class="absolute top-0 left-0 md:left-[38%]"
-      />
-
-      <p
-        class="absolute font-bold text-xl ss:text-2xl pl-[30%] pt-[6%] ss:pt-[6.5%] min-[510px]:pt-8 min-[510px]:pl-30 min-[615px]:pl-[25%] md:pl-[58%] min-[935px]:pl-[55%] min-[1115px]:pl-[52%] min-[1420px]:pl-[50%] 2xl:pl-[48%]"
-      >
-        Incoming Event
-      </p>
-    </div>
-    <div
-      class="p-10 md:py-20 lg:px-28 xl:px-[20%] md:grid md:grid-cols-3 md:gap-8"
-    >
-      <div
-        class="md:w-[200px] md:h-[200px] lg:h-[280px] lg:w-[280px] justify-self-end"
-      >
-        <img
-          src={eventImage}
-          alt="ACSS Event Placeholder"
-          class="object-cover"
-        />
-      </div>
+<section class="scrollFadeIn">
+  <div
+    class="banner-container p-2 grid grid-cols-1 ss:mt-20 md:mt-28 3xl:mx-40"
+  >
+    <div class="p-10 lg:px-14 xl:px-[18%] md:grid md:grid-cols-3 md:gap-8">
       <div class="md:col-span-2 justify-self-center">
+        <!-- Incoming Event Header -->
+        <div
+          class="flex flex-row gap-2 px-4 py-2 mb-4 justify-center items-center max-w-fit incoming-event"
+        >
+          <img
+            src="/assets/notification.svg"
+            alt="Notification Vector"
+            class="w-[30px]"
+          />
+
+          <p class="font-bold text-sm ss:text-base">Incoming Event</p>
+        </div>
+
+        <!-- Event Name -->
         <p
-          class="text-3xl ss:text-4xl lg:text-5xl content-center font-bold gradient-line py-2"
+          class="text-4xl lg:text-5xl content-center font-bold gradient-line py-2 max-w-fit"
         >
           {eventName}
         </p>
+
+        <!-- Event Description -->
         <p class="pt-4">{eventDescription}</p>
+
+        <!-- Date and Time -->
         <div
-          class="glassmorphic-rectangle flex flex-row gap-2 min-[485px]:gap-5 p-[7%] min-[485px]:p-3.5 min-[485px]:w-[325px] mt-4 mb-6 items-center"
+          class="glassmorphic-rectangle flex flex-row gap-2 min-[485px]:gap-5 p-[7%] min-[485px]:p-3.5 min-[485px]:w-[325px] my-4 items-center"
         >
           <img
             src="/assets/calendar.svg"
@@ -51,26 +51,50 @@
           />
           <p class="text-center">{eventDateTime}</p>
         </div>
-        <Button text="Register Now" />
+
+        <!-- Register Button -->
+        <Button onClick={handleButton}>Register Now</Button>
+      </div>
+
+      <!-- Event Image -->
+      <div class="justify-self-end self-center">
+        <img
+          src={eventImage}
+          alt="ACSS Event Placeholder"
+          class="object-cover"
+        />
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  .gradient-line {
-    border: 10px solid;
-    border-image-slice: 1;
-    border-width: 5px;
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
-    border-image-source: linear-gradient(
-      270deg,
-      rgba(46, 55, 146, 0) 0%,
-      #2e3792 27.6%,
-      #00f5f1 74.48%,
-      rgba(0, 245, 241, 0) 100%
+  /* for the date and time background */
+  .glassmorphic-rectangle {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  }
+
+  /* incoming event blue green gradient background */
+  .banner-container {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 245, 241, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+    border-radius: 20px;
+  }
+
+  /* incoming event header background */
+  .incoming-event {
+    border-radius: 60px;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0) 100%
     );
   }
 </style>

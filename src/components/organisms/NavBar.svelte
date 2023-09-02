@@ -1,82 +1,89 @@
 <script>
   import { Button, HamburgerMenu } from "$components";
+  import { page } from "$app/stores";
 
   let pages = [
-    ["Home", "../", "false"],
-    ["About Us", "../../AboutUs", "false"],
-    ["Showcase", "../../Showcase", "false"],
-    ["Developers", "../../DevelopersPage", "false"],
-    ["ACSS Week 2023", "../../ACSSWeek", "false"],
+    { title: "About Us", url: "/about-us" },
+    { title: "Showcase", url: "/showcase" },
+    { title: "Developers", url: "/developers" },
   ];
 
-  /**
-   * @param {string} _page
-   */
-  function handleClick(_page) {
-    for (let i = 0; i < pages.length; i++) {
-      if (pages[i][0] === _page) {
-        pages[i][2] = "true";
-      } else {
-        pages[i][2] = "false";
-      }
-    }
-    console.log(pages);
+  const isActive = (/** @type {string} */ path) => {
+    return $page.url.pathname == path;
+  };
+
+  function handleClick() {
+    // string = "You wasted a second of your life :D";
+    // buttonVisible = false;
   }
 
-  function handleClick2() {
-    // Do something here if needed
-  }
+  // let showComponent = true;
+  // const handleHover = () => {
+  //   showComponent = true;
+  // };
+
+  // const handleLeave = () => {
+  //   showComponent = false;
+  // };
 </script>
 
-<nav class="nav min-w-screen z-20">
-  <div class="grid grid-cols-4">
-    <img
-      src="/logo.webp"
-      alt="The official seal of The Alliance of Computer Science Student"
-      class="nav__logo"
-    />
+<header>
+  <nav class="p-10 fixed z-50">
+    <div class="flex lg:hidden xl:hidden justify-start self-start">
+      <HamburgerMenu />
+    </div>
+  </nav>
+  <div class="hoverable-component bg-transparent">
+    <!-- {#if showComponent} -->
+    <nav
+      class="hovered-section"
+      on:mouseenter={handleHover}
+      on:mouseleave={handleLeave}
+    >
+      <div
+        class="flex flex-row justify-between items-center fixed top-0 w-screen pl-10 xl:pl-20 lg:pl-20 pr-20 pb-3 pt-10 lg:pt-3 xl:pt-3 z-50 backdrop-blur-none lg:backdrop-blur-md xl:backdrop-blur-md"
+      >
+        <div class="hidden lg:grid xl:grid grid-cols-2">
+          <a href="/">
+            <img
+              src="/logo.webp"
+              alt="The official seal of The Alliance of Computer Science Student"
+              class="nav__logo"
+            />
+          </a>
+        </div>
+        <div class="hidden lg:flex items-center flex justify-end gap-5">
+          <ul class="flex flex-row gap-5">
+            {#each pages as { title, url }}
+              <li>
+                <a
+                  href={url}
+                  class={`duration-300 ${
+                    isActive(url)
+                      ? "text-base-sky-blue hover:text-base-white gradient-line mt-1"
+                      : ""
+                  } hover:text-base-sky-blue`}>{title}</a
+                >
+              </li>
+            {/each}
+          </ul>
+          <a href="/contact-us">
+            <Button onClick={handleClick}>Contact Us</Button>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- {/if} -->
   </div>
-  <ul
-    class="nav__right text-lg font-light tracking-wide font-sans text-inherit"
-  >
-    {#each pages as item, index}
-      <li>
-        <a href={item[1]} on:click={() => handleClick(item[0])}>{item[0]}</a>
-        {#if item[2] == "true"}
-          <div class="gradient-line mt-1 show" />
-        {/if}
-      </li>
-    {/each}
-    <a href="../../ContactUs">
-      <Button onClick={handleClick2}>Contact Us</Button>
-    </a>
-  </ul>
-  <div class="nav__menu hidden flex justify-start self-start">
-    <HamburgerMenu />
-  </div>
-</nav>
+</header>
 
 <style>
-  a {
-    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  /* .hoverable-component .hovered-section {
+    display: none; 
   }
-  a:hover {
-    color: var(--color-sky-blue);
-    opacity: 0.7;
-  }
-  .gradient-line {
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(
-      270deg,
-      rgba(0, 245, 241, 0) 0%,
-      #00f5f1 47.92%,
-      rgba(0, 245, 241, 0) 100%
-    );
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-
+  .hoverable-component:hover .hovered-section {
+    display: block !important;
+  } */
   .show {
     opacity: 1;
   }
@@ -105,15 +112,5 @@
     align-items: center;
 
     column-gap: 3rem;
-  }
-
-  @media (min-width: 0px) and (max-width: 1200px) {
-    .nav__menu {
-      display: flex;
-    }
-    .nav__right,
-    .nav__logo {
-      display: none;
-    }
   }
 </style>

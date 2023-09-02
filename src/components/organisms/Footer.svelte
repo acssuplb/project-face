@@ -1,5 +1,37 @@
 <script>
-  import { Button, FooterContentOne, FooterContentTwo } from "$components";
+  import { FooterContentOne, FooterContentTwo } from "$components";
+
+  let HomePage = [
+    ["DevStories", ""],
+    ["Strengths", ""],
+    ["Contributions", ""],
+    ["Brief Showcase", ""],
+  ];
+
+  let Showcase = [
+    ["Projects", ""],
+    ["Events", ""],
+    ["Workshops", ""],
+    ["Activities", ""],
+  ];
+
+  let AboutUs = [
+    ["History", ""],
+    ["Mission & Vision", ""],
+    ["Core Vaues", ""],
+    ["Advisers", ""],
+  ];
+
+  let Developers = [
+    ["Executives", ""],
+    ["Resident Members", ""],
+    ["Member Roster", ""],
+  ];
+
+  function handleClick() {
+    // string = "You wasted a second of your life :D";
+    // buttonVisible = false;
+  }
 </script>
 
 <div class="svg-container">
@@ -17,38 +49,40 @@
     />
   </svg>
 </div>
-<div class="footer">
-  <div class="footer__mid-1 flex flex-row gap-10">
+<div class="footer flex flex-col h-fit z-20">
+  <div class="hidden md:flex lg:flex xl:flex w-100">
     <FooterContentOne />
   </div>
-  <div class="footer__mid-2 flex flex-row gap-10 hidden">
+  <div class="flex md:hidden lg:hidden xl:hidden w-100">
     <FooterContentTwo />
   </div>
-  <div class="footer__bottom">
-    <div class="flex flex-row align-center justify-center">
-      <img
+  <div
+    class="footer__bottom flex flex-row pl-20 pr-20 pt-5 pb-5 w-100 justify-between items-center"
+  >
+    <div class="flex flex-row align-center justify-start flex-grow">
+      <!-- <img
         src="/logo.webp"
         alt="The official seal of The Alliance of Computer Science Student"
         class="footer__logo"
-      />
-      <div class="flex flex-col font-light align-center justify-center ml-3">
+      /> -->
+      <div class="flex flex-col font-thin align-center justify-center">
         <p class="i-tiny">Alliance of Computer Science Students</p>
         <p class="i-super-tiny">University of the Philippines Los Banos</p>
       </div>
     </div>
-    <div class="flex font-light">
+    <div class="flex font-thin justify-end flex-grow">
       <p class="i-tiny">2023</p>
     </div>
   </div>
 </div>
 
 <style>
-  @media (min-width: 0px) and (max-width: 1100px) {
-    .footer__mid-1 {
-      display: none;
-    }
-    .footer__mid-2 {
-      display: flex;
+  @media (min-width: 0px) and (max-width: 500px) {
+    .footer__bottom {
+      row-gap: 1rem;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
     }
   }
   .svg-container {
@@ -67,7 +101,7 @@
     z-index: 1;
     position: relative;
     width: 100%;
-    background-color: var(--color-blue);
+    background-color: var(--color-dark-3);
     box-shadow: 0 0 100px rgba(59, 127, 239, 0.5);
     transition: box-shadow 0.5s ease-in-out;
   }
@@ -75,28 +109,7 @@
   .footer:hover {
     box-shadow: 0 0 110px rgba(59, 127, 239, 7);
   }
-  .footer__mid-1,
-  .footer__mid-2 {
-    width: 100%;
-    background-color: var(--color-dark-3);
-    padding: 2rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  .footer__logo {
-    max-height: 3rem;
-  }
   .footer__bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
     background-color: var(--color-dark-4);
   }
 </style>

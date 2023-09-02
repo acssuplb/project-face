@@ -1,29 +1,5 @@
-<!-- IF SCROLLS (To be edited if background is not fixed) -->
-<!-- <div id="gradient-start" class="relative z-0">
-    <img
-        src="/assets/gradient-blur-hexagon.svg"
-        alt="Gradient Blur Hexagon"
-        class="absolute top-[-500px] left-[82%] min-h-[900px] max-h-[900px] min-w-[900px] max-w-[900px] floating-3"
-    />
-    <img
-        src="/assets/gradient-blur-ellipse.svg"
-        alt="Gradient Blur Ellipse"
-        class="absolute top-[-150px] left-[60%] min-h-[800px] max-h-[800px] min-w-[800px] max-w-[800px] floating-1"
-    />
-    <img
-        src="/assets/gradient-blur-ellipse.svg"
-        alt="Gradient Blur Ellipse"
-        class="absolute top-[-580px] left-[-320px] min-h-[800px] max-h-[800px] min-w-[800px] max-w-[800px] floating-2"
-    />
-    <img
-        src="/assets/gradient-blur-ellipse.svg"
-        alt="Gradient Blur Ellipse"
-        class="absolute top-[370px] right-[15%] min-h-[800px] max-h-[800px] min-w-[800px] max-w-[800px] floating-3"
-    />
-</div> -->
-
-<!-- IF FIXED -->
-<div class="relative z-0">
+<!-- Gradient Blurred Circle and Hexagon Moving Website Background -->
+<div class="relative">
     <img
         src="/assets/gradient-blur-hexagon.svg"
         alt="Gradient Blur Hexagon"
@@ -47,6 +23,7 @@
 </div>
 
 <style>
+    /* Floating Animations Random Directions */
     .floating-1 {
         animation-name: floating-1;
         animation-duration: 8s;

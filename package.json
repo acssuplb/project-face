@@ -21,7 +21,7 @@
 		"@commitlint/config-conventional": "^17.6.6",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/adapter-vercel": "^3.0.2",
-		"@sveltejs/kit": "^1.20.4",
+		"@sveltejs/kit": "^1.22.4",
 		"autoprefixer": "^10.4.14",
 		"concurrently": "^8.2.0",
 		"husky": "^8.0.3",
@@ -37,6 +37,7 @@
 	"type": "module",
 	"dependencies": {
 		"@sanity/vision": "^3.14.2",
+		"@splidejs/svelte-splide": "^0.2.9",
 		"sanity": "^3.14.2"
 	}
 }

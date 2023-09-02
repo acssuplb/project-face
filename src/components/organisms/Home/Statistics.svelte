@@ -2,14 +2,14 @@
     // Import statements
     import { onMount } from "svelte";
 
-
     // CUSTOMIZE THIS: Add here the statistics
     let statistics = [
         [8, "Years of Service"],
-        [91, "Developers"]
+        [65, "Active Members"],
+        [91, "Alumni"],
     ];
     // END OF CUSTOMIZATION
-    
+
     let spotlight = 0;
     /**
      * @type {string | number | NodeJS.Timeout | undefined}

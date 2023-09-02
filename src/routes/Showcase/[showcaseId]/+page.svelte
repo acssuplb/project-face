@@ -1,6 +1,6 @@
 <script>
     import {ShowcaseHeader, NavBar, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs} from "$components";
-
+    import GradientBlur from "$components/molecules/Home/GradientBlur.svelte";
 
     import { page } from '$app/stores'
     const showcaseId = page;
@@ -19,8 +19,9 @@
       }
   </style>
   
-  <div class="min-h-screen flex flex-col items-center showcase-background gap-20">
-    <NavBar/>
+  <div class="min-h-screen flex flex-col items-center showcase-background gap-10">
+    <GradientBlur />
+    
     <ShowcaseHeader/>
     <ShowcaseImage/>
     <ShowcaseDescription/>
@@ -73,9 +74,7 @@
           </div>
       </div>
        -->
-      <footer class="footer">
-          <p class="text-white text-sm">© 2023 YourSite. All rights reserved.</p>
-      </footer>
+ 
   
   
   </div>

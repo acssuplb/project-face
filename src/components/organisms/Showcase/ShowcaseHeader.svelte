@@ -1,4 +1,4 @@
-<header class="relative h-55vh min-h-300px z-1">
+<header class="description relative h-55vh min-h-300px z-1 px-5">
     <div class="showcase-content flex flex-col justify-center h-full ">
         <div class="showcase-container">
             <div class="showcase-title perspective-60" >
@@ -19,10 +19,7 @@
 
     @media (max-width: 640px) {
         .showcase-content {
-            padding-top: 2.5rem;
-            padding-right: 1.5rem;
-            padding-left: 1.5rem;
-
+            padding-top: 8rem;
         }
 
         .text-base {
@@ -42,9 +39,8 @@
 
     @media (min-width: 641px) and (max-width: 767px) {
         .showcase-content {
-            padding-top: 4.5rem;
-            padding-right: 3rem;
-            padding-left: 3rem;
+            padding-top: 8rem;
+
 
         }
 
@@ -64,9 +60,7 @@
  
     @media (min-width: 768px) and (max-width: 1023px) {
         .showcase-content {
-            padding-top: 4.5rem;
-            padding-right: 3.5rem;
-            padding-left: 3.5rem;
+            padding-top: 8rem;
         }
 
         .text-base {
@@ -86,8 +80,7 @@
     @media (min-width: 1024px) {
         .showcase-content {
             padding-top: 5rem;
-            padding-right: 4rem;
-            padding-left: 4rem;
+
 
         }
         .text-base {

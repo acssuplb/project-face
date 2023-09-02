@@ -1,11 +1,11 @@
 //--- Atoms ---
 import Button from './atoms/Button.svelte';
 import HamburgerMenu from './atoms/HamburgerMenu.svelte';
-import ChatBot from './atoms/chatBot.svelte';
+import ChatBot from './atoms/ChatBot/ChatBot.svelte';
 
 //--- Molecules ---
-import FooterContentOne from'./molecules/Footers/FooterContentOne.svelte';
-import FooterContentTwo from'./molecules/Footers/FooterContentTwo.svelte';
+import FooterContentOne from './molecules/Footers/FooterContentOne.svelte';
+import FooterContentTwo from './molecules/Footers/FooterContentTwo.svelte';
 
 
 //--- Organisms ---
@@ -17,14 +17,15 @@ import CoreValues from './organisms/AboutUs/CoreValues.svelte';
 import History from './organisms/AboutUs/History.svelte';
 import MissionVision from './organisms/AboutUs/MissionVision.svelte';
 import Advisers from './organisms/AboutUs/Advisers.svelte';
+import PhotoPage from './organisms/AboutUs/PhotoPage.svelte';
 
 //Contact Us
 import ContactForm from './organisms/ContactUs/ContactForm.svelte';
 
 //Developers
-import Executives from './organisms/Developers/Executives.svelte';
-import MembersRoster from './organisms/Developers/MembersRoster.svelte';
+import InitialSection from './organisms/Developers/InitialSection.svelte';
 import ResidentMembers from './organisms/Developers/ResidentMembers.svelte';
+import MembersRoster from './organisms/Developers/MembersRoster.svelte';
 
 //Home
 import BriefShowcase from './organisms/Home/BriefShowcase.svelte';
@@ -34,6 +35,11 @@ import Hero from './organisms/Home/Hero.svelte';
 import IncomingActivity from './organisms/Home/IncomingActivity.svelte';
 import Strengths from './organisms/Home/Strengths.svelte';
 import Summary from './organisms/Home/Summary.svelte';
+import Statistics from './organisms/Home/Statistics.svelte';
+//Home Molecules
+import StatisticsTemplate from './molecules/Home/StatisticsTemplate.svelte';
+import DevStoriesHeader from './molecules/Home/DevStoriesHeader.svelte';
+import DevStoriesTemplate from './molecules/Home/DevStoriesTemplate.svelte';
 
 //Showcase
 import ShowcaseImage from './organisms/Showcase/ShowcaseImage.svelte'
@@ -55,11 +61,12 @@ export {
     Button, HamburgerMenu, ChatBot,
     //Molecules
     FooterContentOne, FooterContentTwo,
+    DevStoriesHeader, DevStoriesTemplate, StatisticsTemplate,
     //Organisms
     NavBar, Footer,
-    CoreValues, History, MissionVision, Advisers,
+    CoreValues, History, MissionVision, Advisers, PhotoPage,
     ContactForm,
-    Executives, MembersRoster, ResidentMembers, 
-    BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary, 
+    InitialSection, ResidentMembers, MembersRoster,
+    BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary, Statistics,
     Activities, Events, Projects, Workshops, ShowcaseNavBar, ShowcaseTitle, ShowcaseCards, ShowcaseHeader, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs
 }

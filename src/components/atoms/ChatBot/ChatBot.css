@@ -1,0 +1,35 @@
+.chatbot__button {
+    border-radius: 100px 100px 0px 100px;
+    box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.25);
+
+    animation-name: none;
+    animation-timing-function: ease-out;
+    animation-duration: 0.2s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+@keyframes animate-button-border--open {
+    0% {
+        border-radius: 100px 100px 0px 100px;
+        
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        border-radius: 100px 0px 100px 100px;
+    }
+}
+
+@keyframes animate-button-border--close {
+    0% {
+        border-radius: 100px 0px 100px 100px;
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        border-radius: 100px 100px 0px 100px;
+    }
+}

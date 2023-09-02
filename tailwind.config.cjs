@@ -9,6 +9,7 @@ module.exports = {
             'lg': '1024px',
             'xl': '1280px',
             '2xl': '1536px',
+            '3xl': '1920px',
         },
         letterSpacing: {
             wide: '.025em',
@@ -29,7 +30,8 @@ module.exports = {
                         "sky-blue": "#30CAF2",
                         1: '#1E0E37',
                         2: '#0A041F',
-                        3: '#060217'
+                        3: '#060217',
+                        4: '#03010c'
                     },
                     gray: {
                         1: "#9593A4",

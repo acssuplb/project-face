@@ -29,7 +29,7 @@
 </script>
 
 {#if isHighlighted}
-    <div class="relative z-10">
+    <div class="relative">
         <img
             src="/assets/gradient-blur-hexagon.svg"
             alt="Gradient Blur Hexagon"
@@ -42,7 +42,7 @@
         </div>
     </div>
 {:else}
-    <div class="relative hexagon-border z-10">
+    <div class="relative hexagon-border">
         <div class="absolute hexagon" />
         <slot name="image" />
         <div class="hexagon-filter absolute" />

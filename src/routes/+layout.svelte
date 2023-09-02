@@ -4,6 +4,7 @@
   import GradientBlur from "$components/molecules/Home/GradientBlur.svelte";
   import { onMount } from "svelte";
 
+  // Scroll Fade In Animation (To use: add "scrollFadeIn" class to a html element)
   function scrollFadeIn() {
     let scrollFadeInElements = document.getElementsByClassName("scrollFadeIn");
 

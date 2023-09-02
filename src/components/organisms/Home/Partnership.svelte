@@ -13,6 +13,7 @@
     ];
     // END OF CUSTOMIZATION
 
+    // Variables (for ui)
     let duration = logos.length < 10 ? 36000 : logos.length * 4000; // Duration of animatiion
     let resetDuration = logos.length < 10 ? 600 : logos.length * 60; // Duration of reset animation
     let transitionLeft =

@@ -45,7 +45,7 @@
 </script>
 
 <div class="flex flex-col items-center">
-    <h5 id={"title-" + text} class="font-bold w-fit z-10 {tailwindcustomization}">
+    <h5 id={"title-" + text} class="font-bold w-fit {tailwindcustomization}">
         {text}
     </h5>
     <svg

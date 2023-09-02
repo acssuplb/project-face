@@ -27,7 +27,6 @@
   ];
   // END OF CUSTOMIZATION
 
-  // Variables (for ui)
   let circleBlurMargin = 0;
   let windowWidth = 0;
   $: spotlight = 1;
@@ -37,7 +36,7 @@
    */
   let interval;
 
-  // Updates the top position of gradient blur after resize
+  // Updates the margin of gradient blur after resize
   function updateCircleBlurMargin() {
     let circleBlur = document.getElementById("circle-blur");
     let briefShowcase = document.getElementById("brief-showcase");
@@ -52,7 +51,6 @@
     canAutoChange = !canAutoChange;
   }
 
-  // Updates the windowWidth variable
   function updateSize() {
     windowWidth = document.documentElement.clientWidth;
   }
@@ -99,17 +97,16 @@
 </script>
 
 <div
-  class="flex flex-col gap-8 mt-[110px] mb-[40px] ml-[10%] mr-[10%] w-[80%] h-fit scrollFadeIn"
+  class="flex flex-col gap-5 mt-[110px] mb-[40px] ml-[10%] mr-[10%] w-[80%] h-fit scrollFadeIn"
 >
   <h5 class="break-words text-center">Brief Showcase</h5>
   <div
     id="brief-showcase"
-    class="flex flex-row justify-center relative w-[100%] h-[100%]"
+    class="flex flex-row justify-center items-center relative w-[100%] h-[100%]"
   >
     <div
-      class="w-[100%] min-w-[8vw] max-w-[180px] h-fit flex flex-col items-center justify-center gap-12 mt-10"
+      class="w-[100%] min-w-[8vw] max-w-[180px] h-[100%] flex flex-col items-center justify-center gap-12 mb-[5%]"
     >
-      <!-- Left Hexagonal Photos -->
       {#if windowWidth > 1100}
         {#each Array(3) as a, index}
           {#if spotlight == index + 1}
@@ -212,12 +209,11 @@
         {/each}
       {/if}
     </div>
-    <!-- Gradient Blur -->
     <img
       id="circle-blur"
       src="/assets/gradient-blur-ellipse.svg"
       alt="Gradient Blur Ellipse"
-      class="absolute w-[600px] h-[600px] max-w-[78vw] max-h-[78vw] top-0"
+      class="absolute w-[600px] h-[600px] max-w-[78vw] max-h-[78vw]"
       on:click={() => {
         newInterval();
         if (spotlight != 6) {
@@ -227,16 +223,14 @@
         }
       }}
     />
-    <div class="flex flex-col gap-6 items-center">
-      <!-- Image On Spotlight -->
+    <div class="flex flex-col gap-6 justify-center items-center">
       <div
         id="showcased"
         class="rounded-full w-[500px] h-[500px] max-w-[64vw] max-h-[64vw] bg-[#060217]"
       />
-      <!-- Title Of The Event On Spotlight -->
       <div
         id="showcase-name"
-        class="flex items-center justify-center w-fit rounded-2xl cursor-pointer"
+        class="flex items-center justify-center w-fit rounded-2xl"
         on:click={() => {
           window.location.assign("./Showcase");
         }}
@@ -245,14 +239,13 @@
           text={events[spotlight - 1][0]}
           isFixed={false}
           width={0}
-          tailwindcustomization="text-white text-sm font-normal text-center hover:text-[#00F5F1] transition duration-500 ease"
+          tailwindcustomization="text-sm font-normal text-center"
         />
       </div>
     </div>
     <div
-      class="w-[100%] min-w-[8vw] max-w-[180px] h-fit flex flex-col items-center justify-center gap-12 mt-10"
+      class="w-[100%] min-w-[8vw] max-w-[180px] h-[100%] flex flex-col items-center justify-center gap-12 mb-[5%]"
     >
-      <!-- Right Hexagonal Photos -->
       {#if windowWidth > 1100}
         {#each Array(3) as a, index}
           {#if spotlight == index + 4}
@@ -378,7 +371,7 @@
       rgba(46, 55, 146, 0.3) 90%,
       rgba(46, 55, 156, 0) 100%
     );
-    filter: blur(20px);
+    filter: blur(30px);
     opacity: 0;
     transition: opacity 0.3s;
   }
@@ -388,11 +381,11 @@
   }
 
   #showcase-name {
-    position: relative;
+    position: relative; 
   }
   .hex {
     width: 102px;
-    height: 102px;
+    height: 102px; 
     clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
   }
   #left-aligned {

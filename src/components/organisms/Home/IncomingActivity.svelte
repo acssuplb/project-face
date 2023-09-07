@@ -4,7 +4,7 @@
   let eventDescription =
     "Lorem ipsum dolor sit amet consectetur. Euismod tellus mattis eget bibendum tempus non sed. Posuere dis sapien suspendisse tellus. Urna venenatis.";
   let eventImage = "/assets/placeholder-event-image.svg";
-  let eventDateTime = "September 00, 2023 7:00 PM";
+  let eventDateTime = "September 21, 2023 7:00 PM";
   import { Button } from "$components";
   import { goto } from "$app/navigation";
 

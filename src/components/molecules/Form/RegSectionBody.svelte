@@ -54,8 +54,7 @@
             illus &&
             illusPos &&
             formPos &&
-            formPos.top + illusPos.height / 2 - illusPos.height * 0.05 <=
-                windowHeight / 2 &&
+            formPos.top + illusPos.height / 2 - illusPos.height * 0.05<= windowHeight / 2 &&
             formPos.bottom - illusPos.height / 2 + illusPos.height * 0.15 >=
                 windowHeight / 2
         ) {
@@ -71,12 +70,6 @@
         window.addEventListener("resize", updateSize); // Add event listener for resize
         window.addEventListener("resize", updateIllusPos);
         window.addEventListener("scroll", updateIllusPos); // Add event listener for scroll
-
-        return () => {
-            window.removeEventListener("resize", updateSize); 
-            window.removeEventListener("resize", updateIllusPos);
-            window.removeEventListener("scroll", updateIllusPos);
-        };
     });
 </script>
 

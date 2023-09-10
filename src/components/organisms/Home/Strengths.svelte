@@ -79,11 +79,6 @@
     bgElementChange();
     window.addEventListener("resize", bgElementChange);
     window.addEventListener("scrollend", bgElementChange);
-
-    return(()=>{
-      window.removeEventListener("resize", bgElementChange);
-      window.removeEventListener("scrollend", bgElementChange);
-    })
   });
 </script>
 

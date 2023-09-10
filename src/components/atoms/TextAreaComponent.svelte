@@ -21,7 +21,7 @@
   <textarea
     id={"Form" + label}
     name={label}
-    class="custom-scrollbar w-full h-[30vh] mt-2 rounded-lg text-black h-8 px-3 py-2 bg-white/[0.8] placeholder:italic placeholder:text-gray-800 placeholder:font-thin"
+    class="custom-scrollbar w-full h-[30vh] mt-2 rounded-lg text-black h-8 pl-3 pr-3 bg-white/[0.8] placeholder:italic placeholder:text-gray-800 placeholder:font-thin"
     {placeholder}
     required
   />

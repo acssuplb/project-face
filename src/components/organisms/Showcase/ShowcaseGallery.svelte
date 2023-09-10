@@ -8,7 +8,9 @@
   let showModal = false;
   let selectedImageIndex = 0;
 
-  import ShowcaseModal from "./ShowcaseModal.svelte";
+
+
+  import Modal from "./Modal.svelte";
 
   import { data } from "./data";
   let galleryImages = [];
@@ -60,7 +62,7 @@
 
 
   {#if showModal}
-    <ShowcaseModal {selectedImageIndex} {galleryImages} {closeModal} {prevImage} {nextImage}/>
+    <Modal {selectedImageIndex} {galleryImages} {closeModal} {prevImage} {nextImage}/>
   {/if}
 
 </section>

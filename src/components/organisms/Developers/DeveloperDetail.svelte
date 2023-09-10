@@ -2,15 +2,51 @@
     export let developer;
     export let closeModal;
 
-    import Modal from "../Modal.svelte";
+    import GradientBlur from "$components/molecules/Home/GradientBlur.svelte";
+    import { onMount } from "svelte";
     import Carousel from "./Carousel.svelte";
 
+    let top = 0;
+
     function onCloseButtonClick() {
+        scrollableMain();
         closeModal(); // Call the closeModal function passed from the parent
     }
+
+    // Removes the scrollbar on main
+    function fixedMain() {
+        let main = document.getElementById("fixed-on-modal-on");
+        if (main) {
+            top = main.getBoundingClientRect().top;
+            main.style.position = "fixed";
+            main.style.top = top + "px";
+            main.style.width = "100vw";
+        }
+    }
+
+    // Adds the scrollbar on main
+    function scrollableMain() {
+        let main = document.getElementById("fixed-on-modal-on");
+        if (main) {
+            main.style.position = "static";
+            window.scrollTo({ top:top*-1, left:0, behavior: "instant"})
+            main.style.width = "auto";
+        }
+    }
+
+    onMount(() => {
+        fixedMain();
+        window.addEventListener("resize", fixedMain);
+        return()=>{
+            scrollableMain();
+            window.removeEventListener("resize", fixedMain);
+        }
+    });
 </script>
 
-<Modal>
+<div
+    class="modal fixed inset-0 flex justify-center z-20 backdrop-blur-lg bg-base-black mx-auto px-5 overflow-y-auto overflow-x-hidden md:items-center"
+>
     <div
         class="relative top-[150px] flex flex-col h-fit gap-0 md:flex-row md:align-center md:justify-between md:px-8 md:py-0 md:gap-10 md:top-0 xl:gap-20"
     >
@@ -171,9 +207,22 @@
             </div>
         </div>
     </div>
-</Modal>
+</div>
 
 <style>
+    .modal {
+        /* background: linear-gradient(
+            135deg,
+            rgba(16, 17, 44, 0.663) 0%,
+            rgba(17, 28, 32, 0.8) 100%
+        ); */
+        background: linear-gradient(
+            180deg,
+            rgba(9, 9, 54, 0.663) 0%,
+            rgba(6, 2, 23, 0.8) 100%
+        );
+    }
+
     .photo {
         filter: drop-shadow(0px 1px 1px #000000);
     }

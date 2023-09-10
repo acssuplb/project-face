@@ -1,5 +1,4 @@
 <script>
-    import { goto } from "$app/navigation";
   import { Button } from "$components";
 
   let HomePage = [
@@ -12,8 +11,8 @@
   let Showcase = [
     ["Projects", "/showcase#projects"],
     ["Events", "/showcase#events"],
-    ["Workshops", "/showcase#workshops"],
-    ["Activities", "/showcase#activities"],
+    ["Workshops", "/workshops#workshops"],
+    ["Activities", "/activities#activities"],
   ];
 
   let AboutUs = [
@@ -82,7 +81,7 @@
       <p class="font-normal text-sm mb-1">Showcase</p>
       {#each Showcase as item, index}
         <div class="page-container">
-          <div on:click={()=>{localStorage.setItem("activeTab", "activities"); goto("/showcase")}}><p>{item[0]}</p></div>
+          <a href={item[1]}><p>{item[0]}</p></a>
         </div>
       {/each}
     </div>

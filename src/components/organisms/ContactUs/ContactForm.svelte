@@ -99,7 +99,7 @@
         <div
           class="glassmorphic-rectangle flex justify-start items-center row-span-1"
         >
-          <div class="w-full flex flex-col">
+          <div class="w-100 flex flex-col">
             <form
               id="registration-form"
               class="h-fit flex flex-col justify-between"

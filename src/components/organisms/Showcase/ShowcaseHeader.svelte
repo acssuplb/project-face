@@ -31,7 +31,7 @@
                 <div class="showcase-container">
                     <div class="showcase-title perspective-60" >
                         <div class = "flex flex-row items-center gap-4">
-                            <BackButton reference="/showcase"/>
+                            <BackButton/>
                             <h5 class="text-3xl lg:text-4xl font-normal transform-style-flat origin-top-center text-white">
                             
                                 {content.title}

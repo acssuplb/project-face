@@ -14,7 +14,7 @@
 
 
 
-<section class="px-5 md:py-10">
+<section class="z-50 px-5 md:py-10">
     <div class="dev-cards-content">
         <div class=" flex flex-col md:items-center ">
             <h4 class="text-4xl lg:text-5xl font-bold text-white">

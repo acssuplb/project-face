@@ -147,10 +147,6 @@
 
     return () => {
       clearInterval(interval);
-      window.removeEventListener("resize", updateCircleBlurMargin);
-      window.removeEventListener("resize", updateSize);
-      window.removeEventListener("resize", mobileReactivity);
-      window.removeEventListener("scroll", mobileReactivity);
     };
   });
 </script>

@@ -18,7 +18,7 @@ export const data = {
         {
             title: "Project FACE V2",
             blurb: "Official Website of Alliance of Computer Science Students" ,
-            images: ["/acss_uplb_websitev2.webp", "/acss_uplb_website_02.webp", "/acss_uplb_website_03.webp", "/acss_uplb_website_04.webp"],
+            images: ["/acss_uplb_websitev2.webp", "/acss_uplb_websitev202.webp", "/acss_uplb_websitev204.webp", "/acss_uplb_websitev205.webp"],
             description: "We have always wanted to reach more people. Other than our social media handles, our official website is also our official introduction to the World Wide Web. Our website is likewise a convenient way to get the latest information about our developers, our recent events and activities, and our recent projects.",
             developers: [
                 {id: 0, name: "Michael Jay Makiling", role: "Project Manager", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["", "", ""  ],ts:["/angular.svg","/flutter.svg","/react.svg"], pic:["/devpic_kael.webp"]},
@@ -35,7 +35,7 @@ export const data = {
             title: "Project FACE: ACSS Week 2023",
             blurb: "Optimize Your Capabilities to the Fullest with Defragment" ,
             images: ["/acss_week.webp", "/acss_week02.webp", "/acss_week03.webp", "/acss_week04.webp", "/acss_week05.webp"],
-            description: "Explore ACSS Week 2023: Defragment using this website! Get the inside scoop on Exhibit, Company Talks, and Sublimed – the ultimate tech event trifecta. Discover cutting-edge projects, gain insights from industry leaders, and test your knowledge in an epic quiz con. ",
+            description: "The ACSS Week 2023: Defragment website features three exciting events: The Exhibit, Company Talks, and Sublimed Experience. Together, these events offer a comprehensive experience for computer science enthusiasts to learn about the organization and engage in its activities. The website serves as a portal for visitors to access detailed information about the events, as well as learn about the partners and sponsors who have made it all possible.",
             developers: [
                 {id: 0, name: "Aron Resty Ramillano", role: "Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/PERSEUS-1337", "mailto:abramillano@up.edu.ph", "https://www.linkedin.com/in/aron-resty-ramillano-61aa38266/" ], ts:["/svelte.svg","/figma.svg","/docker.svg"], pic:["/dev_resty.webp"]},
                 {id: 1, name: "Renz <br> Tegrado", role: "Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://www.linkedin.com/in/jerichocalibuso/", "", ""  ], ts:["/rust.svg","/express.svg","/next.svg"], pic:["/dev_renz.webp"]},
@@ -73,7 +73,7 @@ export const data = {
         },
         {
             title: "Orientation",
-            blurb: "Delving into the Core of ACSS: Path to Discovery and Connection",
+            blurb: "Delving into the Core of ACSS: Connect with ACSS Developers",
             images: ["/acss_uplb_orientation.webp","/acss_uplb_orientation02.webp","/acss_uplb_orientation03.webp","/acss_uplb_orientation04.webp","/acss_uplb_orientation05.webp","/acss_uplb_orientation06.webp"],
             description: "The Alliance of Computer Science Students - UPLB holds orientations with the objective of introducing the organization —and more importantly, the people behind the organization— to the UPLB community. In the same way, our orientations provide us the means to get to know and to better serve the needs of the UPLB community."
         },
@@ -91,7 +91,7 @@ export const data = {
         },
         {
             title: "Exhibits",
-            blurb: "Exploring the Forefront of Computer Science from Emerging Techs",
+            blurb: "Sharing Tech Trends, Emerging Concepts, and Organization's Info",
             images: ["/acss_uplb_exhibit.webp", "/acss_uplb_exhibit02.webp", "/acss_uplb_exhibit03.webp", "/acss_uplb_exhibit04.webp", "/acss_uplb_exhibit05.webp"],
             description: "As an academic organization, our exhibits fulfill the desire to share knowledge, ranging from trends in computer science, emerging technologies, up to already well-known concepts that will pique the interest of the community. Our exhibits also reveal at-a-glance information about our organization, as well as information about our events at the time."
         },
